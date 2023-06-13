@@ -1,8 +1,8 @@
 body {
   height: 100%;
  
- 
 }
+
 p {
   font-size: 16px;
   color: #6f6f6f;
@@ -13,15 +13,36 @@ p {
 img {
   max-width: 100%;
 }
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+    outline: none;
+}
+
 a{
 text-decoration: none;
 color: #000000;
+list-style: none;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
 }
 ul,
 ol {
   padding: 0;
   margin: 0;
 }
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f8f8f8;
+  background-position: top center;
+}
+
 
  /* buttons */
 
@@ -173,11 +194,7 @@ ol {
   z-index: 9;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all, 0.3s;
-  -moz-transition: all, 0.3s;
-  -ms-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
+ 
 }
 
 .header__top__right__language ul li {
@@ -212,82 +229,7 @@ ol {
   display: inline-block;
 }
 
-.header__menu {
-  padding: 24px 0;
-}
 
-.header__menu ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 50px;
-  position: relative;
-}
-
-.header__menu ul li .header__menu__dropdown {
-  position: absolute;
-  left: 0;
-  top: 50px;
-  background: #222222;
-  width: 180px;
-  z-index: 9;
-  padding: 5px 0;
-  -webkit-transition: all, 0.3s;
-  -moz-transition: all, 0.3s;
-  -ms-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.header__menu ul li .header__menu__dropdown li {
-  margin-right: 0;
-  display: block;
-}
-
-.header__menu ul li .header__menu__dropdown li:hover>a {
-  color: #7fad39;
-}
-
-.header__menu ul li .header__menu__dropdown li a {
-  text-transform: capitalize;
-  color: #ffffff;
-  font-weight: 400;
-  padding: 5px 15px;
-}
-
-.header__menu ul li.active a {
-  color: #7fad39;
-}
-
-.header__menu ul li:hover .header__menu__dropdown {
-  top: 30px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.header__menu ul li:hover>a {
-  color: #7fad39;
-}
-
-.header__menu ul li:last-child {
-  margin-right: 0;
-}
-
-.header__menu ul li a {
-  font-size: 14px;
-  color: #252525;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-  -webkit-transition: all, 0.3s;
-  -moz-transition: all, 0.3s;
-  -ms-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-  padding: 5px 0;
-  display: block;
-}
 
 .header__cart {
   text-align: right;
@@ -347,13 +289,7 @@ ol {
   font-weight: 700;
 }
 
-.humberger__menu__wrapper {
-  display: none;
-}
 
-.humberger__open {
-  display: none;
-}
 
 /*----Hero*/
 
@@ -361,39 +297,6 @@ ol {
   padding-bottom: 50px;
 }
 
-.hero.hero-normal {
-  padding-bottom: 30px;
-}
-
-.hero.hero-normal .hero__categories {
-  position: relative;
-}
-
-.hero.hero-normal .hero__categories ul {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 46px;
-  width: 100%;
-  z-index: 9;
-  background: #ffffff;
-}
-
-.hero.hero-normal .hero__search {
-  margin-bottom: 0;
-}
-
-.hero__categories__all i {
-  font-size: 16px;
-  color: #ffffff;
-  margin-right: 10px;
-}
-
-.hero__categories__all span {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-}
 
 .hero__categories ul {
   border: 1px solid #ebebeb;
@@ -495,3 +398,58 @@ ol {
 .hero__text p {
   margin-bottom: 35px;
 }
+
+ /* Categories Slider */
+
+
+.categories__item {
+  height: 270px;
+  position: relative;
+  border-radius: 25px;
+  size: 2px;
+}
+
+.categories__item h5 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  bottom: 20px;
+  text-align: center;
+}
+
+.categories__item h5 a {
+  font-size: 18px;
+  color: #1c1c1c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 12px 0 10px;
+  background: #ffffff;
+  display: block;
+}
+
+.categories__slider .col-lg-3 {
+  max-width: 100%;
+  
+}
+
+.categories__slider.owl-carousel .owl-nav button {
+  font-size: 18px;
+  color: #1c1c1c;
+  height: 70px;
+  width: 30px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  background: #ffffff;
+}
+
+.categories__slider.owl-carousel .owl-nav button.owl-next {
+  left: auto;
+  right: -35px;
+}
+
