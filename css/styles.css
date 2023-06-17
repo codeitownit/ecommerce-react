@@ -452,3 +452,34 @@ ol {
   left: auto;
   right: -35px;
 }
+
+/* category grid */
+.form-check-input[type="checkbox"]:checked {
+  color: #7fad39;
+  background-color: #7fad39;
+  border-color: #7fad39;
+  accent-color: #7fad39;
+}
+.mb-4{
+  background-color: #7fad39;
+}
+.align-items-center{
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 10px;
+
+}
+
+input[type=range]::-moz-range-thumb {
+  background: #7fad39;
+}
+#button-addon2{
+  background-color: #7fad39;
+}
+.btn:hover{
+  background-color: #7fad39;
+}
+.footer{
+  padding-bottom: 0;
+}
+
